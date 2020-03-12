@@ -6,7 +6,7 @@ public interface Sim {
 	
 	public void browse() ;
 	
-	default void printAllContacts() {
-		System.out.println("No contacts found");
-	}
+//	default void printAllContacts() {
+//		System.out.println("No contacts found");
+//	}
 }

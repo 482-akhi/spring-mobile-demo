@@ -2,9 +2,13 @@ package com.capg.demo.spring;
 
 import java.util.Map;
 
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+@Component("vodafone")
 public class VodafoneSim implements Sim{
-
+	@Value("${vodafone.callCharges}")
 	private float callCharges;
+	@Value("${vodafone.internetSpeed}")
 	private float internetSpeed;
 	Map<String, Long> contacts;
 	
@@ -55,8 +59,8 @@ public class VodafoneSim implements Sim{
 		System.out.println("Browsing with Vodafone.. speed - "+internetSpeed+"mb/s");
 	}
 	
-	@Override
-	public void printAllContacts() {
-		contacts.forEach((name,number)->System.out.println(name+" - "+number));
-	}
+//	@Override
+//	public void printAllContacts() {
+//		contacts.forEach((name,number)->System.out.println(name+" - "+number));
+//	}
 }

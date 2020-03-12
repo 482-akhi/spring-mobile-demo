@@ -5,7 +5,7 @@
     http://www.springframework.org/schema/beans/spring-beans.xsd 
     http://www.springframework.org/schema/context 
     http://www.springframework.org/schema/context/spring-context.xsd">
-     
+  
      <bean id="airtel" class="com.capg.demo.spring.AirtelSim">
      <property name="callCharges" value="1.5"/>
      <property name="internetSpeed" value="8.5"/>
@@ -16,15 +16,14 @@
      <value>Raju</value>
      </list>
      </property>
-     </bean>
-     
+     </bean>  
       <bean id="airtel1" class="com.capg.demo.spring.AirtelSim">
      <constructor-arg name="callCharges" value="2.5"/>
      <constructor-arg name="internetSpeed" value="6.5"/>
-      </bean>
+      </bean> 
+      
      
-     
-    <bean id="vodafone" class="com.capg.demo.spring.VodafoneSim">
+    <bean id="sim" class="com.capg.demo.spring.VodafoneSim">
      <property name="callCharges" value="1.5"/>
      <property name="internetSpeed" value="8.5"/>
      <property name="contacts">
@@ -34,13 +33,9 @@
      <entry key="Nishan" value="7895616961"/>
      </map>
      </property>
-     </bean>
-     
-     
+     </bean> 
+   
      <bean id="mobile" class="com.capg.demo.spring.Mobile">
-     <property name="sim" ref="vodafone"/>
      </bean>
      
-     
-  
   </beans>

@@ -2,10 +2,14 @@ package com.capg.demo.spring;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+@Component("airtel")
 public class AirtelSim implements Sim{
 
-	
+	@Value("${airtel.callCharges}")
 	private float callCharges;
+	@Value("${airtel.internetSpeed}")
 	private float internetSpeed;
 	private List<String> contacts;
 	
@@ -62,7 +66,7 @@ public class AirtelSim implements Sim{
 	public void browse() {
 		System.out.println("Browsing with Airtel.. speed - "+internetSpeed+"mb/s");
 	}
-	public void printAllContacts() {
-		contacts.forEach(System.out::println);
-	}
+//	public void printAllContacts() {
+//		contacts.forEach(System.out::println);
+//	}
 }
